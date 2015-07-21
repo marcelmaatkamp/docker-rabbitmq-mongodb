@@ -4,13 +4,14 @@ This image will automatically stream new items in the amqp-queue RABBITMQ_QUEUE_
 
 # Usage
 
-To stream the queue amqp://RABBITMQ_HOSTNAME/RABBITMQ_QUEUE_NAME into mongodb://MONGODB_HOSTNAME/MONGODB_DATABASE/MONGODB_COLLECTION
-
-  $ docker run -d \
-      --restart=always \
-      --name rabbitmq-mongodb \
-      -e AMQPHOST=amqp://<RABBITMQ_HOSTNAME> \
-      -e MONGODB=mongodb://<MONGODB_HOSTNAME>/<MONGODB_DATABASE> \
-      -e MONGOCOLLECTION=<MONGODB_COLLECTION> \
-      -e TRANSLATECONTENT=true \
-      marcelmaatkamp/rabbitmq-mongodb <RABBITMQ_QUEUE_NAME>
+To stream the queue `amqp://RABBITMQ_HOSTNAME/RABBITMQ_QUEUE_NAME` into `mongodb://MONGODB_HOSTNAME/MONGODB_DATABASE/MONGODB_COLLECTION`
+```
+$ docker run -d \
+  --restart=always \
+  --name rabbitmq-mongodb \
+  -e AMQPHOST=amqp://<RABBITMQ_HOSTNAME> \
+  -e MONGODB=mongodb://<MONGODB_HOSTNAME>/<MONGODB_DATABASE> \
+  -e MONGOCOLLECTION=<MONGODB_COLLECTION> \
+  -e TRANSLATECONTENT=true \
+  marcelmaatkamp/rabbitmq-mongodb <RABBITMQ_QUEUE_NAME>
+```
