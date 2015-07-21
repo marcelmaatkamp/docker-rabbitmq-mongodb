@@ -1,6 +1,6 @@
 # docker-rabbitmq-mongodb
 
-This image will automatically stream new items in the amqp-queue RABBITMQ_QUEUE_NAME into mongodb with the help of [amqp-to-mongo](https://www.npmjs.com/package/amqp-to-mongo)
+This image will automatically stream new items from the queue `RABBITMQ_QUEUE_NAME` into mongodb `MONGODB_COLLECTION` with the help of nodejs' [amqp-to-mongo](https://www.npmjs.com/package/amqp-to-mongo)
 
 # Usage
 
