@@ -7,6 +7,7 @@ This is the source for building the docker image [marcelmaatkamp/rabbitmq-mongod
 # Usage
 
 To stream the queue `amqp://RABBITMQ_HOSTNAME/RABBITMQ_QUEUE_NAME` into `mongodb://MONGODB_HOSTNAME/MONGODB_DATABASE/MONGODB_COLLECTION` use:
+
 ```
   $ docker run -d \
     --restart=always \
